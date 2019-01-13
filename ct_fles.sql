@@ -8,6 +8,8 @@ notes:
  - include only the minimum objects, try to leave out the bckps..
  - ideally, this file is runnable from sqlplus 
 
+ - edit: maintain from/to github https://github.com/pdvmoto/petfles_sql
+
 */
 
 
