@@ -24,5 +24,6 @@ todo items
  - soundex or diff to find typos in rider-names and city-names.
  - use do_fles to  produce files with various result-lists
  - list of anomalies in original-data
+ - lists per year: rider-finds, rider-kms...
  - read from XLS - which tool would work... ? (sql-dev is very convenient) 
 
