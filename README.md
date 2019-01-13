@@ -1,4 +1,5 @@
 # petfles_sql
+
 code to extract and calculate petfles-results
 
 
@@ -19,4 +20,9 @@ Data goes into a stageing table : FL_STAG
 processing by SQL and PL/SQL, using do_fles.sql
 Output should be spooled to text-files *.lst: top-finds, top-kms, top-locations....
 
+todo items
+ - soundex or diff to find typos in rider-names and city-names.
+ - use do_fles to  produce files with various result-lists
+ - list of anomalies in original-data
+ - read from XLS - which tool would work... ? (sql-dev is very convenient) 
 
