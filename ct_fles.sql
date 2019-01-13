@@ -54,7 +54,7 @@ drop SEQUENCE FL_RDRS_SEQ;
 
  alter table FL_RTES drop constraint FL_RTES_FK_RDRS;
  alter table FL_LCTN drop constraint FL_LCTN_FK_HDNG;
-drop alter table FL_LCTN drop constraint FL_LCTN_FK_FLJS;
+ alter table FL_LCTN drop constraint FL_LCTN_FK_FLJS;
  alter table FL_RTES drop constraint FL_RTES_FK_FLJS;
  alter table FL_RTES drop constraint FL_RTES_FK_TO;
  alter table FL_RTES drop constraint FL_RTES_FK_FROM;
@@ -260,7 +260,7 @@ where fles_id = 11 ;
 
 update fl_fljs set fles_startdate = to_date ('10-10-2018', 'DD-MM-YYYY') 
                  , fles_enddate   = to_date ('29-11-2020', 'DD-MM-YYYY') 
-where fles_id = 11 ;
+where fles_id = 12 ;
 
 -- and add jaap, the oldest rider...
 insert into fl_rdrs ( rider_id, rider_name ) 
