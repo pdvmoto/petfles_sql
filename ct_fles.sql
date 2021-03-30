@@ -213,6 +213,7 @@ insert into fl_fljs ( fles_id, fles_name ) values ( fl_fljs_seq.nextval, 'Fles_1
 insert into fl_fljs ( fles_id, fles_name ) values ( fl_fljs_seq.nextval, 'Fles_13' );
 insert into fl_fljs ( fles_id, fles_name ) values ( fl_fljs_seq.nextval, 'Fles_14' );
 insert into fl_fljs ( fles_id, fles_name ) values ( fl_fljs_seq.nextval, 'Fles_15' );
+insert into fl_fljs ( fles_id, fles_name ) values ( fl_fljs_seq.nextval, 'Fles_16' );
 
 commit ;        
 
@@ -262,21 +263,22 @@ update fl_fljs set fles_startdate = to_date ('04-01-2015', 'DD-MM-YYYY')
 where fles_id = 11 ;
 
 update fl_fljs set fles_startdate = to_date ('10-10-2018', 'DD-MM-YYYY') 
-                 , fles_enddate   = to_date ('29-11-2020', 'DD-MM-YYYY') 
+                 , fles_enddate   = to_date ('23-06-2019', 'DD-MM-YYYY') 
 where fles_id = 12 ;
 
-update fl_fljs set fles_startdate = to_date ('10-10-2018', 'DD-MM-YYYY') 
-                 , fles_enddate   = to_date ('29-11-2020', 'DD-MM-YYYY') 
+update fl_fljs set fles_startdate = to_date ('29-06-2019', 'DD-MM-YYYY') 
+                 , fles_enddate   = to_date ('29-05-2020', 'DD-MM-YYYY') 
 where fles_id = 13 ;
 
-update fl_fljs set fles_startdate = to_date ('10-10-2018', 'DD-MM-YYYY') 
-                 , fles_enddate   = to_date ('29-11-2020', 'DD-MM-YYYY') 
+update fl_fljs set fles_startdate = to_date ('30-05-2020', 'DD-MM-YYYY') 
+                 , fles_enddate   = to_date ('01-12-2021', 'DD-MM-YYYY') 
 where fles_id = 14 ;
 
-update fl_fljs set fles_startdate = to_date ('10-10-2018', 'DD-MM-YYYY') 
-                 , fles_enddate   = to_date ('29-11-2020', 'DD-MM-YYYY') 
+update fl_fljs set fles_startdate = to_date ('01-01-2022', 'DD-MM-YYYY') 
+                 , fles_enddate   = to_date ('29-11-2022', 'DD-MM-YYYY') 
 where fles_id = 15 ;
 
+-- consider a trigger + constraint on start- and end-dates
 
 -- and add jaap, the oldest rider...
 insert into fl_rdrs ( rider_id, rider_name ) 
