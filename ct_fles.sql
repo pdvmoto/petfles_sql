@@ -210,6 +210,9 @@ insert into fl_fljs ( fles_id, fles_name ) values ( fl_fljs_seq.nextval, 'Fles_0
 insert into fl_fljs ( fles_id, fles_name ) values ( fl_fljs_seq.nextval, 'Fles_10' );
 insert into fl_fljs ( fles_id, fles_name ) values ( fl_fljs_seq.nextval, 'Fles_11' );
 insert into fl_fljs ( fles_id, fles_name ) values ( fl_fljs_seq.nextval, 'Fles_12' );
+insert into fl_fljs ( fles_id, fles_name ) values ( fl_fljs_seq.nextval, 'Fles_13' );
+insert into fl_fljs ( fles_id, fles_name ) values ( fl_fljs_seq.nextval, 'Fles_14' );
+insert into fl_fljs ( fles_id, fles_name ) values ( fl_fljs_seq.nextval, 'Fles_15' );
 
 commit ;        
 
@@ -261,6 +264,19 @@ where fles_id = 11 ;
 update fl_fljs set fles_startdate = to_date ('10-10-2018', 'DD-MM-YYYY') 
                  , fles_enddate   = to_date ('29-11-2020', 'DD-MM-YYYY') 
 where fles_id = 12 ;
+
+update fl_fljs set fles_startdate = to_date ('10-10-2018', 'DD-MM-YYYY') 
+                 , fles_enddate   = to_date ('29-11-2020', 'DD-MM-YYYY') 
+where fles_id = 13 ;
+
+update fl_fljs set fles_startdate = to_date ('10-10-2018', 'DD-MM-YYYY') 
+                 , fles_enddate   = to_date ('29-11-2020', 'DD-MM-YYYY') 
+where fles_id = 14 ;
+
+update fl_fljs set fles_startdate = to_date ('10-10-2018', 'DD-MM-YYYY') 
+                 , fles_enddate   = to_date ('29-11-2020', 'DD-MM-YYYY') 
+where fles_id = 15 ;
+
 
 -- and add jaap, the oldest rider...
 insert into fl_rdrs ( rider_id, rider_name ) 
