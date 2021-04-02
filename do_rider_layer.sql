@@ -8,7 +8,7 @@ set head off
 set feedb off
 set linesize 120 
 set trim on
-set trimspool off
+set trimspool on
 
 column cityname noprint
 column orderby  noprint

@@ -10,6 +10,21 @@ notes:
 
  - edit: maintain from/to github https://github.com/pdvmoto/petfles_sql
 
+Explanations:
+ - input via FL_STAG, columns concur with xls, instructions in xls.
+ - base-table: ridernames in FL_RDRS (and only names!, no derived data )
+ - base_table: fles: FL_FLES: just id and names, no derived data
+ - main data table is FL_LCTN : a location with hider + finder
+ - locations are unique, even if fles has been twice in same geo-loc
+ - next table is FL_RTES : routes, always between two locations
+    to+from are the UK to route, 
+    all other data is "derived" (rider, distance)
+    also derived: the SDO properties of Both locations
+
+ - derived data where possible in Views, not in tables (RTSE has some...)
+ - kml and other formatting in functions, producing strings
+
+
 */
 
 
@@ -164,8 +179,8 @@ create table fl_rtes (
 --- and some derived data.
 , rider_id      number (9,0 )    -- fk  -- note: rider is derived from lctn 
 , fles_id       number (9,0 )    -- fk  -- note: fles is derived from lctn 
-, dist_xls      number (7,3 )    -- note: distance as given in XLS 
-, dist_SDO      number (7,3 )    -- note: derived from GEO-function.
+, dist_xls      number (10,6 )    -- note: distance as given in XLS 
+, dist_SDO      number (10,6 )    -- note: derived from GEO-function.
 , fr_sdo        SDO_GEOMETRY 
 , to_sdo        SDO_GEOMETRY
  -- room for more..
@@ -295,7 +310,7 @@ commit ;
 
 -- stageing table: copy from xls
 create table fl_stag (
-  seq_id        number (9,0)    not null
+  seq_id        number (9,0)    not null  -- sequence = time-order of finds
 , hiding_date   date            
 , hiding_blz    varchar2( 6)
 , hiding_rider  varchar2(30)     
@@ -307,15 +322,20 @@ create table fl_stag (
 , loc_desc      varchar2(64)
 , city          varchar2(30)
 , prov          varchar2(3)
-, distance      number (12,3)  -- tolerate excess. fix later.
+, distance      number (12,6)  -- tolerate excess. fix later.
 );
 
 create unique index fl_stag_pk on fl_stag ( seq_id ) ;
 alter table fl_stag add constraint fl_stag_pk primary key  ( seq_id ) ;
 
+-- --------------
+-- 
 -- at this point: import from petfles_pdv_v<n>.xls ...
 -- instruction on sheet2 : some commas and some values too large!
 -- on 14Jan: 2325 records 
+-- on 01-Apr-2020: 3858 records 
+--
+-- --------------
 
 /* ***
 -- set fles-id here.. choose max when in doubt
