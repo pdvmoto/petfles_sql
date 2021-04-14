@@ -1,7 +1,21 @@
 # petfles_sql
 
-code to extract and calculate petfles-results
+Code to extract and calculate petfles-results
 
+TL;DR: 
+Run the create-script and run the import script.
+you will then find your data in the tble fl_stag (stageing);
+for postgres: pg_ct_fles.sql
+for oracle  : ct_fles.sql
+import-script into either database: impport_<date>.sql, insert-stmnts that work in both databases...
+as of 01-Apr: 3857 records.
+Have fun SQL-ing.
+/TL;DR
+
+
+More complete description, 
+and how to put data in to "proper" tables for locations and routes, 
+read on....:
 
 Purpose is to store + share the SQL code for "petfles"
 (and to explore github)
