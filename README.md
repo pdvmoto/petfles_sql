@@ -4,11 +4,14 @@ Code to extract and calculate petfles-results
 
 TL;DR: 
 Run the create-script and run the import script.
-you will then find your data in the tble fl_stag (stageing);
-for postgres: pg_ct_fles.sql
-for oracle  : ct_fles.sql
-import-script into either database: impport_<date>.sql, insert-stmnts that work in both databases...
-as of 01-Apr: 3857 records.
+You will then find your data in the tble fl_stag (stageing);
+
+For postgres: pg_ct_fles.sql
+For oracle  : ct_fles.sql
+
+To import into either database: impport_dd-mon-yyyy.sql, 
+insert-stmnts that work in both databases...
+As of 01-Apr: 3857 records.
 Have fun SQL-ing.
 /TL;DR
 
