@@ -8,6 +8,8 @@ notes:
  - include only the minimum objects, try to leave out the bckps..
  - ideally, this file is runnable from sqlplus 
 
+ - accuracy of coordinates: 5 or 6 digits is sub-meter-distance. >6 digits too much
+
  - edit: maintain from/to github https://github.com/pdvmoto/petfles_sql
 
 Explanations:

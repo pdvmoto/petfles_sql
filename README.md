@@ -43,4 +43,5 @@ todo items
  - list of anomalies in original-data
  - lists per year: rider-finds, rider-kms...
  - read from XLS - which tool would work... ? (sql-dev is very convenient) 
+ - accuracy: use 6 digits to be sub-meter. more than 6 is too much
 
